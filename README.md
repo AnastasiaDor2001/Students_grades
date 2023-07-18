@@ -32,27 +32,41 @@ The first few variables were chosen because of their importance, the last few, s
 # Creating models
 ## Logistic regression
 After constructing the logistic regression, the important variables were:
+
 failures, higheryes, schoolMS, schoolsupyes, sexM, studytime, reasonreputation, Medu, Walc.
+
 Mean Absolute Error = 0.3746419
+
 Mean Squared Error = 0.1781772
+
 Accuracy = 0.6512821
+
 VIF's of variables from 1.2 to 1.4
+
 Area under the ROC curve: 0.6537
 
 As we can see, variable Walc has some impact on a target variable. Let's try to interpret odds of this variable:
+
 Odds = 1.0431056
+
 A student, consuming more alcohol on weekends, is on average 4.3% more likely to receive a grade below average than a student, consuming less alcohol on weekends.
+
 Let's also interpret variable higheryes. The reference category was 'no'.
+
 Odds = 0.7721112
+
 A student planning to take a higher education has on average 23% lower chance of receiving a below average grade in comparison with a student not planning a higher education.
 
 ## Decision tree and Random Forest
 Before the implementation of the decision tree and forest, text variables were categorized and coded into numerical variables.
 The data set was also divided into training and test sets, after which the method DecisionTreeClassifier was applied.
+
 Mean Absolute Error = 0, however it was decided to optimize the tree a little.
+
 The optimal number of leaf nodes was counted, it amounted to 25. After that RandomForestClassifier method was applied.
 
 roc_auc_score for DecisionTree:  0.7042921686746988
+
 roc_auc_score for RandomForest:  0.7754518072289156
 
 # Conclusion
